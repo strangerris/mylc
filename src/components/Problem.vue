@@ -11,7 +11,8 @@
   axios.get('/data.json')
       .then(function (res) {
         const data = res.data
-        data.forEach((item: Problem) => {
+        
+        data.forEach((item: Problem) => {          
           item.ProblemHref = "https://leetcode.cn/problems/" + item.TitleSlug;
           item.ProblemHrefEN = "https://leetcode.com/problems/" + item.TitleSlug;
           item.ContestHref = "https://leetcode.cn/contest/" + item.ContestSlug;
@@ -46,7 +47,8 @@
         if (keyword !== '') {
           let k = keyword.trim().toLowerCase()
           if (!item.Title.toLowerCase().includes(k) &&
-              !item.TitleEN.toLowerCase().includes(k))
+              !item.TitleEN.toLowerCase().includes(k) &&
+              !(item.ID).toString().includes(k))
             return
         }
         
