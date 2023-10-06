@@ -3,7 +3,6 @@ import App from "@/App.vue";
 import Problem from '@/components/Problem.vue'
 import Trend from "@/components/Trending.vue";
 export const menuRouter = [
-
     {
         path: '/',
         name: 'problemPage',

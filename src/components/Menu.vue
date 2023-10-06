@@ -13,7 +13,7 @@ const menuSelect = (key: RouteLocationRaw) => {
 
 <template>
   <div class="menu">
-    <a-menu mode="horizontal"  :default-selected-keys="[currentRoute]" class="menu-box" @menu-item-click="menuSelect">
+    <a-menu mode="horizontal"  :default-selected-keys="[currentRoute]" class="menu-box" @menu-item-click="menuSelect" >
       <a-menu-item v-for="item in menu" :key="item.path" class="menu-item">
           {{$t(item.name)}}
       </a-menu-item>
@@ -25,7 +25,14 @@ const menuSelect = (key: RouteLocationRaw) => {
 <style scoped>
   .menu {
     box-sizing: border-box;
-    width: 300px;
+    width: 250px;
   }
+  :deep(.arco-menu-inner){
+    padding-left: 0;
+    padding-right: 0;    
 
+  }
+  :deep(.arco-menu-overflow-wrap) {
+    display: flex;
+  }
 </style>

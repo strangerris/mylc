@@ -37,6 +37,8 @@
 .layout {
   background: var(--color-bg-2);
   min-height: 100vh;
+  /* min-width: 100vw; */
+  /* white-space:no-wrap  */
 }
 
 .switch-button {
